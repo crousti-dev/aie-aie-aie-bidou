@@ -1,0 +1,195 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #333;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 4px 0 12px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button.primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+button.secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.suggestions {
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-height: 120px;
+  overflow-y: auto;
+  margin-bottom: 8px;
+}
+
+.suggestion {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  background: #eee;
+}
+
+/* Uniformiser tous les champs de saisie et selects */
+input[type="date"], select {
+  padding: 8px 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  color: #333;
+  appearance: none; /* Supprime le style natif du navigateur */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Ajouter une flèche pour les selects uniquement */
+select {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="10" viewBox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
+
+/* Focus commun pour date et select */
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+}
+
+/* Pour s’assurer que le texte est aligné verticalement */
+input[type="date"], select {
+  line-height: 1.5;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-score {
+  font-weight: bold;
+}
+
+.stat-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.stat-meta {
+  font-size: 13px;
+  color: #666;
+}
+button.secondary {
+  background: #f2f2f2;
+  color: #333;
+}
+/* =========================
+   INGREDIENTS – AJOUT AVANT VALIDATION
+========================= */
+
+.ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.ingredient-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: #f1f3f5;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.remove-ingredient-btn {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.remove-ingredient-btn:hover {
+  color: #c00;
+}
+
+/* Bouton ajouter discret */
+.add-ingredient-btn {
+  background: transparent;
+  border: 1px dashed #ccc;
+  color: #555;
+  font-size: 14px;
+  padding: 6px;
+  margin-bottom: 8px;
+}
+
+.add-ingredient-btn:hover {
+  background: #f7f7f7;
+}
